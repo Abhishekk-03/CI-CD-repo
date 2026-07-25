@@ -19,3 +19,9 @@ jobs:
 
       - name: Check Python Version
         run: python3 --version
+
+      - name: Install libraries
+        run: pip install -r requirement.txt
+
+      - name: Check libraries Version
+      - run: pip list
