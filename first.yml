@@ -1,11 +1,13 @@
-name: Greatings
-on: 
+name: Greetings
+
+on:
   - push
   - workflow_dispatch
-jobs:
-    test:
-        runs-on: ubuntu-latest
 
-        steps:
-            - name: print code
-            run: echo "Hello BHai"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Code
+        run: echo "Hello Bhai"
