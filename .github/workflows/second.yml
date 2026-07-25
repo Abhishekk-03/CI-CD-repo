@@ -24,4 +24,4 @@ jobs:
         run: pip install -r requirement.txt
 
       - name: Check libraries Version
-      - run: pip list
+        run: pip list
