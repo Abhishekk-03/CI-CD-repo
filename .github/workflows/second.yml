@@ -1,24 +1,21 @@
-name: Install Dependecnies
+name: Install Dependencies
 
-on: 
-  - push
-  - workflows_dispatch
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
-  installance:
+  installation:
     runs-on: ubuntu-latest
 
     steps:
       - name: Get Code
-        run: echo "get the code from repo"
         uses: actions/checkout@v7
 
-      - name: instal python updated version
-        run: echo "installing updated version"
+      - name: Setup Python
         uses: actions/setup-python@v7
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
-
-      - name: check version
-        run:  python3 --version    
+      - name: Check Python Version
+        run: python3 --version
