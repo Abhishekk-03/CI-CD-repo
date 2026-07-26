@@ -1,4 +1,4 @@
-from Application.Calculator import add, subtract, multiply, divide
+from Calculator import add, subtract, multiply, divide
 
 
 print("Addition:", add(10, 5))
