@@ -28,3 +28,6 @@ jobs:
 
       - name: run test cases
         run: pytest
+
+      - name: testing completted
+        run: echo "testing completted"
