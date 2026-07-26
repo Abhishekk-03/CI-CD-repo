@@ -9,25 +9,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    #Checkout current code 
       - name: Get Code
         uses: actions/checkout@v7
 
+    #install python with sepcific version
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
+    #Verify Python version
       - name: Check Python Version
         run: python3 --version
 
+    #Install all dependencies
       - name: Install libraries
         run: pip install -r requirement.txt
 
+    #Verify all libraries
       - name: Check libraries Version
         run: pip list
 
+    #Execute all test cases 
       - name: run test cases
         run: pytest
-
-      - name: testing completted
-        run: echo "testing completted"
