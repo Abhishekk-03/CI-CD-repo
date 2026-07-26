@@ -33,10 +33,10 @@ jobs:
 
     #Execute all test cases 
       - name: run test cases
-        run: pyt  est
+        run: pytest
 
   Deploying:
-    needs: installation of Dependecies and Executed Tests
+    needs: installation
     runs-on: ubuntu-latest
     steps:
     #Checkout current code 
