@@ -25,3 +25,6 @@ jobs:
 
       - name: Check libraries Version
         run: pip list
+
+      - name: run test cases
+        run: pytest
