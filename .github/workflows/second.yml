@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  installation:
+  installation of Dependecies and Executed Tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,4 +33,25 @@ jobs:
 
     #Execute all test cases 
       - name: run test cases
-        run: pytest
+        run: pyt  est
+
+  Deply the code:
+    needs: installation of Dependecies and Executed Tests
+    runs-on: ubuntu-latest
+    steps:
+    #Checkout current code 
+      - name: Get Code
+        uses: actions/checkout@v7
+
+    #install python with sepcific version
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+    #Install all dependencies
+      - name: Install libraries
+        run: pip install -r requirement.txt
+
+      - name: Build Docker Image
+        run: echo "diployed"
